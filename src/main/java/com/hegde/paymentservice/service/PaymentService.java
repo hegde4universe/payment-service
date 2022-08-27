@@ -10,4 +10,6 @@ public interface PaymentService {
 
     PaymentResponseDto makePayment(PaymentRequestDto paymentRequest);
 
+    PaymentResponseDto getPaymentHistoryByOrderId(int orderId);
+
 }

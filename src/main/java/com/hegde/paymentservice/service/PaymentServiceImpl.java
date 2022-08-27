@@ -28,4 +28,10 @@ public class PaymentServiceImpl implements PaymentService {
                                            .transactionId(payment.getTransactionId())
                                            .build();
     }
+
+    @Override
+    public PaymentResponseDto getPaymentHistoryByOrderId(int orderId) {
+        return paymentRepository.findByOrderId(orderId);
+
+    }
 }
